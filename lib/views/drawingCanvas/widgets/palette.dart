@@ -89,7 +89,7 @@ class ColorPalette extends HookWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Pick a color!'),
+          title: const Text('색상을 고르세요'),
           content: SingleChildScrollView(
             child: ColorPicker(
               pickerColor: color.value,
@@ -100,7 +100,7 @@ class ColorPalette extends HookWidget {
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Done'),
+              child: const Text('완료'),
               onPressed: () => Navigator.pop(context),
             ),
           ],
