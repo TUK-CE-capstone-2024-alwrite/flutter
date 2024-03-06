@@ -1,21 +1,23 @@
-
-import 'package:alwrite/controllers/drawingController.dart';
-import 'package:alwrite/views/drawingView.dart';
+import 'package:alwrite/views/drawingPage.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
+const Color kCanvasColor = Color(0xfff2f3f7);
+
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ChangeNotifierProvider(
-          create: (context) => DrawingProvider(),
-          child: DrawingPage()),
+      title: 'Alwrite',
+      theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: false),
+      debugShowCheckedModeBanner: true,
+      home: const DrawingPage(),
     );
   }
 }
