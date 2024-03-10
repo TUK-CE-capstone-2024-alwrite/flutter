@@ -7,9 +7,10 @@ import '../pdf_viewer.dart';
 
 class PdfController extends GetxController {
   final pdfModel _model = pdfModel();
-
   List<File> get pdfFiles => _model.pdfFiles;
   List<String> get pdfFileNames => _model.pdfFileNames;
+
+  List<String> searchedPdfFiles = []; // 검색된 파일만 나옴
 
   Future<void> pickPDF(BuildContext context) async {
     FilePickerResult? result = await FilePicker.platform.pickFiles(
