@@ -1,10 +1,11 @@
+import 'package:alwrite/Controller/pdf_controller.dart';
 import 'package:alwrite/View/HomePage.dart';
-import 'package:alwrite/View/right_page.dart';
+import 'package:alwrite/View/trash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class leftPage extends StatelessWidget {
-  final TextEditingController searchController = TextEditingController();
+  final controller = Get.put(PdfController());
   leftPage({super.key});
 
   @override
@@ -20,12 +21,35 @@ class leftPage extends StatelessWidget {
               color: Colors.grey[300],
               child: Column(
                 children: [
-                  SizedBox(height: 10),
+                  SizedBox(height: 20),
+                  TextField(
+                    onChanged: (value) => controller.onsearch(value),
+                    decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.grey[400],
+                        hintText: "검색",
+                        hintStyle: TextStyle(fontSize: 16, color: Colors.white),
+                        contentPadding: EdgeInsets.all(10),
+                        prefixIcon: Icon(
+                          Icons.search,
+                          color: Colors.black,
+                        )),
+                  ),
+                  SizedBox(height: 20),
+                  TextButton.icon(
+                      onPressed: () {
+                        Get.to(trashPage());
+                      },
+                      icon: Icon(Icons.delete),
+                      label: Text("휴지통")),
+                  SizedBox(height: 20),
                   TextButton(
                       onPressed: () {
                         Get.off(HomePage());
                       },
-                      child: Text("모든 메모"))
+                      child: Text(
+                        "모든 메모",
+                      )),
                 ],
               ),
             ),

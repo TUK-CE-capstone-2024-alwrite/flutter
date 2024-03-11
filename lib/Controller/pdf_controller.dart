@@ -10,9 +10,10 @@ class PdfController extends GetxController {
   List<File> get pdfFiles => _model.pdfFiles;
   List<String> get pdfFileNames => _model.pdfFileNames;
 
-  List<String> searchedPdfFiles = []; // 검색된 파일만 나옴
+  List<String> searchedPdfFiles = []; // 검색된 파일담는 리스트
 
   Future<void> pickPDF(BuildContext context) async {
+    //파일 피커
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
       allowedExtensions: ['pdf'],
@@ -26,14 +27,24 @@ class PdfController extends GetxController {
 
   void deletePdf(int index) {
     if (index >= 0 && index < pdfFiles.length) {
-      pdfFiles[index].deleteSync();
-      pdfFiles.removeAt(index);
-      pdfFileNames.removeAt(index);
+      //인덱스가 유효한지지 확인.
+      pdfFiles[index].deleteSync(); //해당 인덱스의 파일을 동기적으로 삭제.
+      pdfFiles.removeAt(index); //해당 인덱스의 파일을 리스트에서 제거
+      pdfFileNames.removeAt(index); //해당 인덱스의 파일명읗리스트에서 제거
       update(); // 상태 변경을 알리기 위해 update 호출
     }
   }
 
   void openPdf(File file) {
     Get.to(() => PdfViewer(file: file));
+  }
+
+  //검색한 파일명 필터링
+  onsearch(String search) {
+    searchedPdfFiles = pdfFileNames
+        .where(
+            (fileName) => fileName.toLowerCase().contains(search.toLowerCase()))
+        .toList();
+    Get.forceAppUpdate(); // 검색 결과를 갱신하기 위해 화면을 강제로 갱신합니다.
   }
 }
