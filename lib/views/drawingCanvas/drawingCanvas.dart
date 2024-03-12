@@ -258,7 +258,7 @@ class SketchPainter extends CustomPainter {
         canvas.drawLine(firstPoint, lastPoint, paint);
       } else if (sketch.type == SketchType.circle) {
         //타원형
-        canvas.drawOval(rect, paint);
+        // canvas.drawOval(rect, paint);
         //원
         canvas.drawCircle(centerPoint, radius , paint);
       } else if (sketch.type == SketchType.polygon) {
