@@ -38,7 +38,6 @@ class Sketch {
       sides: sketch.sides,
       type: () {
         switch (drawingMode) {
-          // TODO: OCR 추가하기
           case DrawingMode.eraser:
           case DrawingMode.pencil:
             return SketchType.scribble;
@@ -50,6 +49,8 @@ class Sketch {
             return SketchType.circle;
           case DrawingMode.polygon:
             return SketchType.polygon;
+          case DrawingMode.ocr:
+            return SketchType.ocr;
           default:
             return SketchType.scribble;
         }
@@ -86,7 +87,7 @@ class Sketch {
 }
 
 //스케치타입 열거형
-enum SketchType { scribble, line, square, circle, polygon }
+enum SketchType { scribble, line, square, circle, polygon, ocr}
 
 //스케치타입 확장(객체 문자열을 . 으로 구분후 두번째 해당값 반환)
 extension SketchTypeX on SketchType {

@@ -136,7 +136,12 @@ class CanvasSideBar extends HookWidget {
                   onTap: () => drawingMode.value = DrawingMode.circle,
                   tooltip: 'Circle',
                 ),
-                //OCR 아이콘박스 추가
+                _IconBox( //ocr
+                  iconData: FontAwesomeIcons.wandMagicSparkles,
+                  selected: drawingMode.value == DrawingMode.ocr, 
+                  onTap: () => drawingMode.value = DrawingMode.ocr,
+                  tooltip: 'OCR',
+                ),
               ],
             ),
             const SizedBox(height: 8),
@@ -179,12 +184,12 @@ class CanvasSideBar extends HookWidget {
                   : const SizedBox.shrink(),
             ),
             const SizedBox(height: 10),
-            const Text(
+            const Text( //색상
               '색상',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             const Divider(),
-            ColorPalette(
+            ColorPalette( // 팔레트
               selectedColor: selectedColor,
             ),
             const SizedBox(height: 20),
@@ -458,6 +463,7 @@ class _UndoRedoStack {
     }
   }
 
+  //전체 지우는 함수
   void clear() {
     _sketchCount = 0;
     sketchesNotifier.value = [];
@@ -465,6 +471,7 @@ class _UndoRedoStack {
     currentSketchNotifier.value = null;
   }
 
+  //undo 함수
   void undo() {
     final sketches = List<Sketch>.from(sketchesNotifier.value);
     if (sketches.isNotEmpty) {
@@ -476,6 +483,7 @@ class _UndoRedoStack {
     }
   }
 
+  //redo함수
   void redo() {
     if (_redoStack.isEmpty) return;
     final sketch = _redoStack.removeLast();
@@ -484,6 +492,7 @@ class _UndoRedoStack {
     sketchesNotifier.value = [...sketchesNotifier.value, sketch];
   }
 
+  //배경삭제함수
   void dispose() {
     sketchesNotifier.removeListener(_sketchesCountListener);
   }
