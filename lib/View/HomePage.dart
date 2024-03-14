@@ -1,22 +1,31 @@
-import 'package:alwrite/View/left_page.dart';
+import 'package:alwrite/Controller/pdf_controller.dart';
 import 'package:alwrite/View/navi_drawer.dart';
-import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'right_page.dart';
 
 class HomePage extends StatelessWidget {
+  final controller = Get.put(PdfController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: navidrawer(),
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () async {
+              await controller.pickPDF(context);
+            },
+            icon: Icon(
+              Icons.add,
+              size: 38,
+            ),
+          )
+        ],
+      ),
       body: Container(
-        child: Row(
-          children: [
-            // Expanded(flex: 2, child: leftPage()), //leftPage
-            Expanded(flex: 5, child: rightPage())
-          ],
-        ),
+        child: rightPage(),
       ),
     );
   }

@@ -1,5 +1,4 @@
 import 'package:alwrite/Controller/pdf_controller.dart';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,8 +15,9 @@ class navidrawer extends StatelessWidget {
           Container(
               width: 10,
               height: 230,
-              child: Image(image: AssetImage('Logo2.jpg'), fit: BoxFit.cover)),
-          SizedBox(height: 10),
+              child: Image(
+                  image: AssetImage('assets/Logo2.jpg'), fit: BoxFit.cover)),
+          SizedBox(height: 15),
           ListTile(
             title: TextField(
               onChanged: (value) => controller.onsearch(value),
