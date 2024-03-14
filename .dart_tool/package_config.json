@@ -8,6 +8,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "badges",
+      "rootUri": "file:///C:/Users/ghkdt/AppData/Local/Pub/Cache/hosted/pub.dev/badges-3.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///C:/Users/ghkdt/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
@@ -36,6 +42,12 @@
       "rootUri": "file:///C:/Users/ghkdt/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.6",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "easy_sidemenu",
+      "rootUri": "file:///C:/Users/ghkdt/AppData/Local/Pub/Cache/hosted/pub.dev/easy_sidemenu-0.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "fake_async",
@@ -200,7 +212,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-03-06T10:29:05.898520Z",
+  "generated": "2024-03-14T02:14:09.562797Z",
   "generator": "pub",
   "generatorVersion": "3.2.6"
 }

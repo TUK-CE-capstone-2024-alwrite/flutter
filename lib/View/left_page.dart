@@ -40,8 +40,14 @@ class leftPage extends StatelessWidget {
                       onPressed: () {
                         Get.to(trashPage());
                       },
-                      icon: Icon(Icons.delete),
-                      label: Text("휴지통")),
+                      icon: Icon(
+                        Icons.delete,
+                        color: Colors.black,
+                      ),
+                      label: Text(
+                        "휴지통",
+                        style: TextStyle(color: Colors.black),
+                      )),
                   SizedBox(height: 20),
                   TextButton(
                       onPressed: () {
@@ -49,6 +55,7 @@ class leftPage extends StatelessWidget {
                       },
                       child: Text(
                         "모든 메모",
+                        style: TextStyle(color: Colors.black),
                       )),
                 ],
               ),
@@ -74,7 +81,44 @@ class leftPage extends StatelessWidget {
               child: Container(
                 color: Colors.grey[300],
                 child: ListView(
-                  children: [Text('ss')],
+                  children: [
+                    TextButton.icon(
+                        onPressed: () {
+                          Get.to(trashPage());
+                        },
+                        icon: Icon(
+                          Icons.folder,
+                          color: Colors.black,
+                        ),
+                        label: Text(
+                          "알고리즘",
+                          style: TextStyle(color: Colors.black),
+                        )),
+                    TextButton.icon(
+                        onPressed: () {
+                          Get.to(trashPage());
+                        },
+                        icon: Icon(
+                          Icons.folder,
+                          color: Colors.black,
+                        ),
+                        label: Text(
+                          "이산수학",
+                          style: TextStyle(color: Colors.black),
+                        )),
+                    TextButton.icon(
+                        onPressed: () {
+                          Get.to(trashPage());
+                        },
+                        icon: Icon(
+                          Icons.folder,
+                          color: Colors.black,
+                        ),
+                        label: Text(
+                          "자료구조",
+                          style: TextStyle(color: Colors.black),
+                        ))
+                  ],
                 ),
               ))
         ],

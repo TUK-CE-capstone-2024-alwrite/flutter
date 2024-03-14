@@ -1,3 +1,4 @@
+import 'package:alwrite/View/navi_drawer.dart';
 import 'package:flutter/material.dart';
 
 class trashPage extends StatelessWidget {
@@ -6,7 +7,8 @@ class trashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('s')),
+      drawer: navidrawer(),
+      appBar: AppBar(),
     );
   }
 }

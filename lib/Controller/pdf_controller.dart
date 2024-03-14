@@ -45,6 +45,6 @@ class PdfController extends GetxController {
         .where(
             (fileName) => fileName.toLowerCase().contains(search.toLowerCase()))
         .toList();
-    Get.forceAppUpdate(); // 검색 결과를 갱신하기 위해 화면을 강제로 갱신합니다.
+    Get.forceAppUpdate(); // 검색 결과를 갱신하기 위해 화면을 강제로 갱신.
   }
 }
