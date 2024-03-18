@@ -1,5 +1,11 @@
+
 import 'package:alwrite/View/drawingPage.dart';
+import 'package:alwrite/View/HomePage.dart';
+
+
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 
 void main() {
@@ -13,11 +19,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Alwrite',
-      theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: false),
-      debugShowCheckedModeBanner: true,
-      home: const DrawingPage(),
-    );
+
+    return GetMaterialApp(home: HomePage(), debugShowCheckedModeBanner: false);
   }
 }
+
+    //return MaterialApp(
+     // title: 'Alwrite',
+      //theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: false),
+      //debugShowCheckedModeBanner: true,
+     // home: const DrawingPage(),
+    //);
+  //}
+//}
+
