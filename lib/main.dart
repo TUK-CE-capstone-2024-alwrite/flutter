@@ -1,4 +1,4 @@
-import 'package:alwrite/views/drawingPage.dart';
+import 'package:alwrite/View/drawingPage.dart';
 import 'package:flutter/material.dart';
 
 

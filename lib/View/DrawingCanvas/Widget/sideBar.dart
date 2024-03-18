@@ -3,9 +3,9 @@ import 'dart:io';
 import 'dart:ui' as ui;
 
 import 'package:alwrite/main.dart';
-import 'package:alwrite/views/drawingCanvas/models/drawingMode.dart';
-import 'package:alwrite/views/drawingCanvas/models/sketch.dart';
-import 'package:alwrite/views/drawingCanvas/widgets/palette.dart';
+import 'package:alwrite/View/DrawingCanvas/Widget/palette.dart';
+import 'package:alwrite/View/DrawingCanvas/Model/drawingMode.dart';
+import 'package:alwrite/View/DrawingCanvas/Model/sketch.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:file_saver/file_saver.dart';
 import 'package:flutter/foundation.dart';

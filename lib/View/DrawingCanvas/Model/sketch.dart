@@ -1,4 +1,4 @@
-import 'package:alwrite/views/drawingCanvas/models/drawingMode.dart';
+import 'package:alwrite/View/DrawingCanvas/Model/drawingMode.dart';
 import 'package:flutter/material.dart';
 
 
