@@ -1,9 +1,10 @@
 import 'dart:math' as math;
 import 'dart:ui';
 
+
 import 'package:alwrite/main.dart';
-import 'package:alwrite/views/drawingCanvas/models/drawingMode.dart';
-import 'package:alwrite/views/drawingCanvas/models/sketch.dart';
+import 'package:alwrite/View/DrawingCanvas/Model/drawingMode.dart';
+import 'package:alwrite/View/DrawingCanvas/Model/sketch.dart';
 import 'package:flutter/material.dart' hide Image;
 import 'package:flutter_hooks/flutter_hooks.dart';
 

@@ -1,7 +1,8 @@
 
+import 'package:alwrite/View/drawingPage.dart';
 import 'package:alwrite/View/HomePage.dart';
 
-import 'package:alwrite/views/drawingPage.dart';
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
