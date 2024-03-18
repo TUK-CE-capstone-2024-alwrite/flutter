@@ -13,13 +13,16 @@ class PdfViewer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        child: PDFView(
-          filePath: file.path,
-          enableSwipe: true,
-        ),
-      ),
+          width: double.infinity,
+          height: double.infinity,
+          child: Stack(
+            children: [
+              PDFView(
+                filePath: file.path,
+                enableSwipe: true,
+              ),
+            ],
+          )),
     );
   }
 }

@@ -10,6 +10,7 @@ class rightPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+        padding: EdgeInsets.all(30),
         color: Colors.white,
         child: (GetBuilder<PdfController>(
           builder: (_controller) => GridView.builder(
@@ -18,9 +19,9 @@ class rightPage extends StatelessWidget {
               crossAxisCount:
                   MediaQuery.of(context).orientation == Orientation.landscape
                       ? 6
-                      : 4, // 세로모드 4개 , 가로모드 6개
+                      : 5, // 세로모드 4개 , 가로모드 6개
               mainAxisSpacing: 50, // 간격
-              crossAxisSpacing: 50,
+              crossAxisSpacing: 30,
             ),
             itemCount: _controller.searchedPdfFiles.isNotEmpty
                 ? _controller.searchedPdfFiles.length
@@ -39,6 +40,7 @@ class rightPage extends StatelessWidget {
                   showLongPressDialog(context, index);
                 },
                 child: Card(
+                  elevation: 10,
                   color: Colors.grey,
                   child: Center(
                     child: Column(

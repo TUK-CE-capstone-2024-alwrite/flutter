@@ -30,7 +30,7 @@ class PdfController extends GetxController {
       //인덱스가 유효한지지 확인.
       pdfFiles[index].deleteSync(); //해당 인덱스의 파일을 동기적으로 삭제.
       pdfFiles.removeAt(index); //해당 인덱스의 파일을 리스트에서 제거
-      pdfFileNames.removeAt(index); //해당 인덱스의 파일명읗리스트에서 제거
+      pdfFileNames.removeAt(index); //해당 인덱스의 파일명을 리스트에서 제거
       update(); // 상태 변경을 알리기 위해 update 호출
     }
   }
@@ -45,6 +45,6 @@ class PdfController extends GetxController {
         .where(
             (fileName) => fileName.toLowerCase().contains(search.toLowerCase()))
         .toList();
-    Get.forceAppUpdate(); // 검색 결과를 갱신하기 위해 화면을 강제로 갱신.
+    update(); // 화면 갱신.
   }
 }

@@ -38,7 +38,7 @@ dependencies:
   get:
   file_picker:
   flutter_pdfview:
-  easy_sidemenu: ^0.5.0
+  fan_side_drawer: any
 
 dev_dependencies:
   flutter_test:

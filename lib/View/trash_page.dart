@@ -8,7 +8,7 @@ class trashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: navidrawer(),
-      appBar: AppBar(),
+      appBar: AppBar(title: Text('휴지통')),
     );
   }
 }

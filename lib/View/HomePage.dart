@@ -12,10 +12,12 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       drawer: navidrawer(),
       appBar: AppBar(
+        backgroundColor: Colors.white10,
+        title: (Text('모든메모')),
         actions: [
           IconButton(
             onPressed: () async {
-              await controller.pickPDF(context);
+              await controller.pickPDF(context); // 파일 add
             },
             icon: Icon(
               Icons.add,
